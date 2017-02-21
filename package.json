@@ -7,6 +7,7 @@
     "prestart": "rimraf dist && cpx ./src/index.html ./dist/",
     "start": "node ./fuse.js",
     "test": "cross-env TS_NODE_PROJECT=./src/tsconfig.mocha.json mocha --opts ./test/mocha.travis.opts",
+    "test:jasmine": "cross-env TS_NODE_PROJECT=./src/tsconfig.mocha.json JASMINE_CONFIG_PATH=jasmine/jasmine.json nyc jasmine",
     "test:auto": "cross-env TS_NODE_PROJECT=./src/tsconfig.mocha.json mocha --opts ./test/mocha.opts -G",
     "coverage": "cross-env TS_NODE_PROJECT=./src/tsconfig.mocha.json nyc mocha --opts ./test/mocha.coverage.opts -G"
   },
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@types/chai": "^3.4.34",
     "@types/core-js": "^0.9.35",
+    "@types/jasmine": "^2.5.43",
     "@types/lodash": "^4.14.44",
     "@types/mocha": "^2.2.38",
     "@types/node": "^6.0.52",
@@ -31,6 +33,8 @@
     "cpx": "^1.5.0",
     "cross-env": "^3.1.4",
     "fuse-box": "^1.3.118",
+    "jasmine": "^2.5.3",
+    "jasmine-spec-reporter": "^3.2.0",
     "jsdom": "^9.11.0",
     "jsdom-no-contextify": "^3.1.0",
     "mocha": "^3.2.0",

@@ -1,0 +1,13 @@
+{
+  "spec_dir": "jasmine/",
+  "spec_files": [
+    "jasmine.shim.js",
+    "./*.spec.ts",
+    "./**/*.spec.ts"
+  ],
+  "helpers": [
+    "helpers/**/*.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}
